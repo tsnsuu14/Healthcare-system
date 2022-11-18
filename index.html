@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RaspberryPi Health</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="container">
+            <!-- ASIDE -->
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <img src="./image/logo.png">
+                        <h2 class="text-muted">RaspberryPi <br>
+                            <span class="danger">Health</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">close</span>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <a href="#" class="active">
+                        <span class="material-icons-sharp">home</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="#" >
+                        <span class="material-icons-sharp">
+                            error
+                            </span>
+                        <h3>Warning</h3>
+                    </a>
+                    <a href="#" >
+                        <span class="material-icons-sharp">
+                            mail_outline
+                            </span>
+                        <h3>Send mail</h3>
+                    </a>
+                    
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            help
+                            </span>
+                        <h3>Help</h3>
+                    </a>
+                    <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                        </span>
+                        <h3>Settings</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">
+                            logout
+                            </span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Main section -->
+        <main>
+            <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+            <div class="insights">
+                <!-- Calories -->
+                <div class="calories">
+                    <span class="material-icons-sharp">
+                        bolt
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Calories (cal)</h3>
+                            <h1 id="valCalories"></h1> 
+                        </div>
+                        <div class="progress">
+                        
+                            <svg>
+                                <circle cx="45" cy="45" r="45"></circle>
+                            </svg>
+                            <div class="number" >
+                                <h2>1500</h2>
+                                
+                            </div>
+                           
+                            
+                        </div>
+                        
+                    </div>
+                    <p>Last checked time</p>
+                    <small class="text-muted" id="timeCalories"></small>
+                </div>
+                <!-- Distance -->
+                <div class="distance">
+                    <span class="material-icons-sharp">
+                        my_location
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Distance (m)</h3>
+                            <h1 id="valDistance"></h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="45" cy="45" r="45"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>4000</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Last checked time</p>
+                    <small class="text-muted" id="timeDistance" ></small>
+                </div>
+                <!-- Heart rate -->
+                <div class="heart">
+                    <span class="material-icons-sharp">
+                        monitor_heart
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Heart Rate (bpm)</h3>
+                            <h1 id="valHeart"><h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="45" cy="45" r="45"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>70</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Last checked time</p>
+                    <small class="text-muted" id="timeHeart" ></small>
+                </div>
+                <!-- Steps -->
+                <div class="steps">
+                    <span class="material-icons-sharp">
+                        directions_run
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Steps</h3>
+                            <h1 id="valSteps"></h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="45" cy="45" r="45"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>10000</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Last checked time</p>
+                    <small class="text-muted" id="timeSteps" ></small>
+                </div>
+                <!-- Move -->
+                <div class="move">
+                    <span class="material-icons-sharp">
+                        alarm_on
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Move minutes</h3>
+                            <h1 id="valMove"></h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="45" cy="45" r="45"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>30</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Last checked time</p>
+                    <small class="text-muted" id="timeMove" ></small>
+                </div>
+                <!-- Speed -->
+                <div class="speed">
+                    <span class="material-icons-sharp">
+                        speed
+                        </span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Speed (km/h)</h3>
+                            <h1 id="valSpeed"></h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="45" cy="45" r="45"></circle>
+                            </svg>
+                            <div class="number">
+                                <h2>15</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Last checked time</p>
+                    <small class="text-muted" id="timeSpeed" ></small>
+                </div>
+            </div>
+        </main>
+<!-- End of main -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        widgets
+                        </span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active" >light_mode</span>
+                    <span class="material-icons-sharp" >dark_mode</span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey,</b> Hiep </b> </p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./image/user.jpg">
+                    </div>
+                </div>
+            </div>
+<!-- END of top -->
+<div class="recent-persons">
+    <h2>Personal Information</h2>
+    <div class="persons">
+        <div class="person">
+             <div>
+                <p>Full name :</p>
+                <p>Sex :</p>
+                <p>Data of birth :</p>
+                <p>Height :</p>
+                <p>Weight :</p>
+                
+                
+            </div> 
+             
+            <div>   
+                <h3>Nguyen Tuan Hiep</h3>
+                <h3>Male</h3>
+                <h3>26/09/2001</h3>
+                <h3>160 cm</h3>
+                <h3>54 kg</h3>
+                
+                
+                 
+            </div> 
+
+         </div>
+    </div>
+</div>
+<div class="recent-persons">
+    <div class="persons">
+        <div class="person">
+            <img src="./image/user.jpg">
+
+         </div>
+    </div>
+</div>
+<!-- End of personal information -->
+
+        </div>
+        </div>
+    
+            <div>
+            <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+            <!-- lien ket voi functions.js -->
+            <script>
+              // Your web app's Firebase configuration
+              // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+              var firebaseConfig = {
+                apiKey: "AIzaSyCe-B7LTlhLXBiHF2iTwX7cxNFm4KlWrTU",
+                authDomain: "raspberrypi-health.firebaseapp.com",
+                databaseURL: "https://raspberrypi-health-default-rtdb.asia-southeast1.firebasedatabase.app",
+                projectId: "raspberrypi-health",
+                storageBucket: "raspberrypi-health.appspot.com",
+                messagingSenderId: "300546789967",
+                appId: "1:300546789967:web:c525ed52a4dcf0050ed03a",
+                measurementId: "G-1P9ERGH0SE"
+              };
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+              firebase.analytics();
+            </script>
+            <script src="./main.js"></script>
+            </div>
+    </body>
+</html>    

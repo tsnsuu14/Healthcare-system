@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="mb-5">
+            <h3 class="mb-3">Login</h3>
+            <input type="text"placeholder="Username"id="userInp"class="form-control mb-3">
+            <input type="password"placeholder="Password"id="passInp"class="form-control mb-3">
+
+            <div class="custom-control custom-switch mb-3">
+                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                 <label class="custom-control-label" for="customSwitch1">Keep me Logged In</label>
+              </div>
+
+              <a href="index.html" class="btn w-100 btn-outline-primary mb-3"> Log in</a>
+            <a href="register.html" class="badge badge-secondary py-1 w-100"> Want to Create A New Account?</a>
+            
+       </div>
+
+        <!-- Firebase core -->
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyAue72EmiEULlv3FCFlbq_lK4pputQc6BA",
+              authDomain: "login-f97a1.firebaseapp.com",
+              projectId: "login-f97a1",
+              storageBucket: "login-f97a1.appspot.com",
+              messagingSenderId: "245037382926",
+              appId: "1:245037382926:web:1b0e94c7956725f3e26b5f"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            import { getDatabase, ref, set, child, get } 
+                    from 'https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js';
+            
+            const db = getDatabase();
+
+          </script>
+    </body>
+</html>
